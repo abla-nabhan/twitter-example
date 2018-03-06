@@ -1,0 +1,45 @@
+body{
+    background: #999999;
+}
+h1, h2{
+    display: inline-block;
+}
+ul{
+    background: white;
+}
+li{
+    list-style: none;
+}
+.picture{
+    border-radius: 50%;
+}
+.users{
+    padding-top: 10px;
+    display: inline-block;
+    width: 20%;
+    margin-right: 5px;
+}
+.tweets{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    display: inline-block;
+    width: 40%;
+    height: 900px;
+}
+.topline-container{
+    display: inline-block;
+    background: purple;
+    height: 50px;
+    width: 60%;
+}
+.img-container{
+    background: steelblue;
+    display: inline-block;
+    width: 20%;
+}
+.content-container{
+    display: block;
+    background: pink;
+    height: 100px;
+}

@@ -1,0 +1,17 @@
+{
+    "name": "784205/php",
+    "authors": [
+        {
+            "name": "Abla Nabhan",
+            "email": "abla.nabhan@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "twitterExample\\": "."
+        }
+    },
+    "require": {
+        "fzaninotto/faker": "^1.7"
+    }
+}
