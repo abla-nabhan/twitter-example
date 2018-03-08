@@ -12,6 +12,13 @@ li{
 }
 .picture{
     border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+img{
+  height: 100px;
+  width: 100px;
 }
 .users{
     padding-top: 10px;

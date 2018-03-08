@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Tweet;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function tweets()
+    {
+      return $this->hasMany(Tweet::class);
+    }
+    public function likes()
+    {
+	return $this->belongsToMany(Tweet::class);
+    }
 }

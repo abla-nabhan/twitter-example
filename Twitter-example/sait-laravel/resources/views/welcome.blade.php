@@ -36,13 +36,13 @@
 
 <div class="main-body">
     <div class="profile-column">
-    <?php foreach($users as $user):?>
-
         <ul>
+          <?php foreach($users as $user):?>
             <strong><li><?php echo $user->name ?></li></strong>
             <li>@<?php echo $user->handle ?></li>
+          <?php endforeach ?>
+
         </ul>
-    <?php endforeach ?>
 
     </div>
 
@@ -53,22 +53,23 @@
             <a href="#"><li>Media</li></a>
         </div>
         <div class="twitter-feed-tweets">
+          <ul>
         <?php foreach($tweets as $tweet):?>
-            <ul>
                 <li>
-                    <img src="<?php echo $tweet->user->image ?>"></img>
+                    <img src="<?php echo $user->image ?>"></img>
                 </li>
 
                 <li>
                     <?php echo $tweet->content ?>
                 </li>
                 <li>
-                    <?php echo $tweet->comments ?>k
-                    <?php echo $tweet->retweets ?>k
-                    <?php echo $tweet->likes ?>k
+                  this tweet has  <?php echo count($tweet->comments) ?> comments
+                  this tweet has <?php echo count($tweet->likes) ?> likes
+                  this tweet was liked by <?php echo count($user->likes) ?> users
                 </li>
-            </ul>
         <?php endforeach ?>
+        </ul>
+
         </div>
 
     </div>
@@ -85,16 +86,17 @@
         <h2>You may also like</h2><br/>
         </div>
 
+        <ul>
         <?php foreach($users as $user):?>
-            <ul>
                 <li>
                     <img src="<?php echo $user->image ?>"></img>
                     <?php echo $user->name ?><br>
                     @<?php echo $user->handle ?>
                     <?php echo $user->dateJoined ?>
                 </li>
-            </ul>
         <?php endforeach ?>
+      </ul>
+
     </div>
 </div>
 </body>
